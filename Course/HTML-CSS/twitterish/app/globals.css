@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
+
+
+
+/* browser'ın özellikle p elementine uyguladığı margin'i sıfırladık.
+böylece X logomuz (özellikle dikeyde) gereğinden fazla yer kaplamadı */
+*{
+  margin: 0;
+}
+
+body{
+  /* zeroing */
+  margin: 0;
+  padding: 0;
+  /* font */
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  /* color */
+  color: #333333;
+  /* background */
+  background-color: #fff;
+  /* overflow */
+  overflow-x: hidden;
+
+}
+
+.wrapper{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  /* ! !important kısmını bir sonraki derste tekrar edeceğim. */
+  flex-direction: row !important;
+  justify-content: space-between;
+}
+
+
+.sidenavwrapper{
+  /* tarayıcının width'inin %25'ini kullanacağız */
+  width: 25vw;
+  display: flex;
+  flex-direction: column !important;
+  /* sidenav'ı mevcut kullanılabilir alanda sağa kaydırdık */
+  align-items: flex-end;
+}
+
+.sidenav{
+  width: 275px;
+  display: flex;
+  flex-direction: column !important;
+  align-items: flex-start;
+
+  /* sidenav'ı scroll edilemeyen her durumda sabit bir hale getirdik */
+  position: fixed;
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+  /* item'ler arası boşluğu 10px'e sabitledik */
+  gap: 10px;
+  padding: 20px;
+
+}
+
+.sidenav .item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  font: 20px;
+  font-weight: 400;
+}
+
+/* ilk item'ı seçtik ve bold yaptık */
+/* ':' ve '::' selectorler bize kolaylık sağladı. burada first-of-type ile ilk item'ı seçtik */
+.sidenav .item:first-of-type{
+  font-weight: 700;
+
+}
+
+.sidenav .item img {
+  width: 30px;
+}
+
+/* post butonu için oluşturduğumuz class'ı düzenledik */
+.sidenav .post{
+  background-color: #0c0c0c;
+  color: #fff;
+  padding: 12px 16px;
+  width: 80%;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  /* post butonunu mümkün olduğunca ortalamak için flex'i kullandık */
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  
+}
+
+.sidenav .logo{
+  font-size: 35px;
+  margin:0;
+}
+
+.sidenav .profilewrapper{
+  /* flex 1 ile profilewrapper'ın sidenav'ın geri kalan alanını kaplamasını sağladık */
+  flex:1;
+  display: flex;
+  /* profilewrapper içindeki profile'ı alta yasladık */
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-bottom: 25px;
+  width: 80%;
+}
+
+.profile-image img{
+  width: 50px;
+  /* border-radius ile resmi yuvarlak yaptık */
+  border-radius: 50%;
+}
+
+.profile-more img{
+  width: 24px;
+
+
+}
+
+.profile{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+width: 100%;
+gap: 5px;
+}
+
+.profile-name{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start !important;
+
+}
+
+.profile-more{
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.profile-name p:first-of-type{
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.profile-name p:last-of-type{
+  font-size: 12px;
+  font-weight: 400;
+  color: #4e4d4d;
+}

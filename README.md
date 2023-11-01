@@ -59,6 +59,7 @@ Will be added soon.
 ## CSS
 
 - [CSS Cheatsheet](https://htmlcheatsheet.com/css/)
+- [CSS Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 ## JavaScript
 
